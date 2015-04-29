@@ -47,6 +47,8 @@ docs:
 	open docs/_build/html/index.html
 
 release: clean
+	python setup.py --version | xargs git tag
+	git push upstream --tags
 	python setup.py sdist bdist bdist_wheel upload
 
 sdist: clean

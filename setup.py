@@ -2,14 +2,18 @@
 # -*- coding: utf-8 -*-
 import os
 
-DIR = os.path.dirname(os.path.abspath(__file__))
-
 try:
     from setuptools import setup, find_packages
 except ImportError:
     from distutils.core import setup, find_packages
 
-version = '1.0.0'
+import whatswhere
+
+
+DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+version = whatswhere.VERSION
 
 
 setup(
@@ -26,6 +30,7 @@ setup(
         "GitPython==1.0.0",
         "requests==2.6.0",
         "npyscreen==4.8.6",
+        "click==4.0",
     ],
     license="BSD",
     zip_safe=False,

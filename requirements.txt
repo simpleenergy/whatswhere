@@ -2,3 +2,4 @@ PyGithub==1.25.2
 requests==2.6.0
 npyscreen==4.8.6
 GitPython==1.0.0
+click==4.0
